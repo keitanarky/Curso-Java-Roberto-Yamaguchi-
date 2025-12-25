@@ -1,0 +1,16 @@
+SELECT COUNT(*) FROM empleados;
+SELECT AVG(salario) FROM empleados;
+SELECT MAX(salario) FROM empleados;
+SELECT MIN(salario) FROM empleados;
+SELECT SUM(salario) FROM empleados;
+
+GROUP BY
+SELECT depto_id, AVG(salario)
+FROM empleados
+GROUP BY depto_id;
+
+HAVING
+SELECT depto_id, AVG(salario)
+FROM empleados
+GROUP BY depto_id
+HAVING AVG(salario) > 5000;

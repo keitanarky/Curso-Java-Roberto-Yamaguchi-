@@ -1,0 +1,7 @@
+Formas normales (resumen)
+
+1NF: No valores repetidos, columnas atómicas.
+
+2NF: Cumple 1NF y cada columna depende completamente de la llave primaria.
+
+3NF: No depende de otras columnas que no son la llave.

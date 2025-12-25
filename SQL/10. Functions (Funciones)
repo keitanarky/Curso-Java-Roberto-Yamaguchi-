@@ -1,0 +1,15 @@
+A diferencia de los procedimientos, las funciones devuelven un valor.
+
+Crear función
+
+DELIMITER $$
+CREATE FUNCTION calcularBono(sal DECIMAL(10,2))
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+RETURN sal * 0.10;
+END $$
+DELIMITER ;
+
+Usarla
+SELECT nombre, calcularBono(salario) AS bono FROM empleados;

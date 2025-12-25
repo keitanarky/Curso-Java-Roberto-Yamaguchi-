@@ -1,0 +1,24 @@
+Son bloques de código SQL que se ejecutan como una función en la base de datos.
+
+9.1 Crear un Stored Procedure
+
+DELIMITER $$
+CREATE PROCEDURE obtenerEmpleados()
+BEGIN
+SELECT * FROM empleados;
+END $$
+DELIMITER ;
+
+9.2 Con parámetros
+
+DELIMITER $$
+CREATE PROCEDURE empleadosPorDepartamento(IN p_depto INT)
+BEGIN
+SELECT * FROM empleados WHERE depto_id = p_depto;
+END $$
+DELIMITER ;
+
+9.3 Llamar el procedimiento
+
+CALL obtenerEmpleados();
+CALL empleadosPorDepartamento(2);

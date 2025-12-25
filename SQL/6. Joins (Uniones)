@@ -1,0 +1,12 @@
+INNER JOIN
+SELECT e.nombre, d.nombre
+FROM empleados e
+INNER JOIN departamentos d ON e.depto_id = d.id;
+
+LEFT JOIN
+SELECT e.nombre, d.nombre
+FROM empleados e
+LEFT JOIN departamentos d ON e.depto_id = d.id;
+
+RIGHT JOIN
+SELECT * FROM empleados RIGHT JOIN departamentos ON ...;

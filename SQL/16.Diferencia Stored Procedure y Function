@@ -1,0 +1,86 @@
+Aquí tienes la diferencia clara, directa y completa entre un Stored Procedure (SP) y una Function en SQL:
+
+Diferencias entre Stored Procedure y Function
+
+1. Propósito principal
+
+Stored Procedure (SP):
+Se usa para ejecutar tareas completas: insertar, actualizar, eliminar, validar, hacer procesos largos, generar reportes, etc.
+
+Function:
+Se usa para calcular y devolver un valor, igual que una función matemática.
+
+2. Retorno
+
+SP:
+Puede regresar cero, uno o varios resultados, pero no está obligado a devolver algo.
+
+Function:
+Siempre devuelve un valor (un número, texto, fecha, tabla, etc.).
+
+3. Uso dentro de SELECT
+
+SP:
+ NO se puede usar dentro de un SELECT.
+
+Function:
+ SÍ puedes usarla dentro de un SELECT, WHERE, HAVING, ORDER BY, etc.
+Ejemplo:
+SELECT calcularBono(salario) FROM empleados;
+
+
+4. Transacciones
+
+SP:
+✔️ Pueden manejar transacciones:
+
+START TRANSACTION;
+COMMIT;
+ROLLBACK;
+
+Function:
+ NO pueden manejar transacciones internas.
+
+5. Modificación de datos
+
+SP:
+✔ Puede modificar tablas (INSERT, UPDATE, DELETE).
+
+Function:
+ Por lo general NO debe modificar tablas (dependiendo del motor, está prohibido o limitado).
+
+
+6. Parámetros
+
+SP:
+Admite:
+
+IN
+
+OUT
+
+INOUT
+
+Function:
+Solo admite:
+
+IN
+
+ 7. Uso típico
+Stored Procedure (SP)
+
+✔ Procesos de negocio
+✔ Movimientos en tablas
+✔ Automatizar operaciones
+✔ Lógica compleja
+✔ Validaciones profundas
+✔ Reportes
+✔ Tareas largas
+
+Function
+
+✔ Cálculos
+✔ Validaciones pequeñas
+✔ Transformar datos
+✔ Calcular totales
+✔ Regresar valores a un SELECT

@@ -1,0 +1,4 @@
+SQL (Structured Query Language) es un lenguaje estándar usado para administrar,
+consultar y manipular bases de datos relacionales.
+Permite crear tablas, insertar datos, actualizar registros, eliminarlos
+y crear lógica avanzada como funciones, triggers y procedimientos almacenados.

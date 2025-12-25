@@ -1,0 +1,9 @@
+Evitar SELECT *.
+
+Usar índices correctamente.
+
+Normalizar cuando sea adecuado.
+
+Crear stored procedures para operaciones repetitivas.
+
+Validar datos desde la aplicación.

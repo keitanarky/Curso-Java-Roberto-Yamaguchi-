@@ -1,0 +1,14 @@
+Llave primaria
+
+CREATE TABLE departamentos (
+id INT PRIMARY KEY,
+nombre VARCHAR(50)
+);
+
+Llave foránea
+CREATE TABLE empleados (
+id INT PRIMARY KEY,
+nombre VARCHAR(50),
+depto_id INT,
+FOREIGN KEY (depto_id) REFERENCES departamentos(id)
+);

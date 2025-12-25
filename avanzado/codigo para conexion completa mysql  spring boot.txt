@@ -1,0 +1,36 @@
+spring.application.name=Sistema
+
+
+#conexion mysql
+
+
+spring.datasource.url=jdbc:mysql://localhost:3306/coppel
+spring.datasource.username=root
+spring.datasource.password=
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+#evitar que se cree el esquema de bd
+spring.jpa.hibernate.ddl-auto=none
+
+
+#desactivar tomcat
+spring.main.web-application-type=none
+
+
+# Configuración JPA / Hibernate
+spring.jpa.show-sql=false
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+spring.jpa.properties.hibernate.transaction.coordinator_class=jdbc
+
+logging.level.root=info
+
+# Solo mostrar INFO o superior para todo
+
+
+# O silenciar paquetes específicos (Hibernate, Spring, Tomcat)
+logging.level.org.springframework=ERROR
+logging.level.org.hibernate=ERROR
+logging.level.org.apache.catalina=ERROR
+
+logging.pattern.console=%msg%n

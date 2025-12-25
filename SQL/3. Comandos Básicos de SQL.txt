@@ -1,0 +1,21 @@
+3.1 SELECT
+SELECT columna1, columna2 FROM tabla;
+
+3.2 WHERE
+SELECT * FROM empleados WHERE salario > 5000;
+
+3.3 ORDER BY
+SELECT * FROM empleados ORDER BY nombre ASC;
+
+3.4 LIMIT / TOP
+SELECT * FROM empleados LIMIT 10; -- MySQL / PostgreSQL
+SELECT TOP 10 * FROM empleados; -- SQL Server
+
+3.5 INSER
+INSERT INTO empleados (nombre, salario) VALUES ('Juan', 8000);
+
+3.6 UPDATE
+UPDATE empleados SET salario = 9000 WHERE id = 1;
+
+3.7 DELETE
+DELETE FROM empleados WHERE id = 1;

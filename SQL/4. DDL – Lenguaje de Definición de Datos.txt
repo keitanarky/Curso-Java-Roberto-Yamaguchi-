@@ -1,0 +1,14 @@
+Crear tabla
+
+CREATE TABLE empleados (
+id INT PRIMARY KEY AUTO_INCREMENT,
+nombre VARCHAR(50),
+salario DECIMAL(10,2),
+fecha_ingreso DATE
+);
+
+Modificar tabla
+ALTER TABLE empleados ADD columna_nueva VARCHAR(100);
+
+Eliminar tabla
+DROP TABLE empleados;

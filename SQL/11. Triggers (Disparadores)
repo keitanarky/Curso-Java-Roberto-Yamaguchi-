@@ -1,0 +1,24 @@
+
+
+Un trigger se ejecuta automáticamente cuando ocurre un evento: INSERT, UPDATE o DELETE.
+
+11.1 Trigger BEFORE INSERT
+DELIMITER $$
+CREATE TRIGGER antes_insert_empleado
+BEFORE INSERT ON empleados
+FOR EACH ROW
+BEGIN
+SET NEW.fecha_ingreso = CURDATE();
+END $$
+DELIMITER ;
+
+11.2 Trigger AFTER UPDATE
+DELIMITER $$
+CREATE TRIGGER despues_update_salario
+AFTER UPDATE ON empleados
+FOR EACH ROW
+BEGIN
+INSERT INTO historial_salarios(empleado_id, salario_anterior, salario_nuevo, fecha)
+VALUES (OLD.id, OLD.salario, NEW.salario, NOW());
+END $$
+DELIMITER ;

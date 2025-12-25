@@ -1,0 +1,7 @@
+MySQL – Muy común en aplicaciones web.
+
+PostgreSQL – Robusto, compatible con funciones avanzadas.
+
+SQL Server – Enfocado en entornos empresariales.
+
+Oracle – Alto rendimiento para grandes corporativos.

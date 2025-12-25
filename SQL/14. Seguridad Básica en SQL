@@ -1,0 +1,7 @@
+
+
+Control de usuarios y roles.
+
+Uso de GRANT y REVOKE.
+
+GRANT SELECT, INSERT ON empresa.* TO 'usuario'@'localhost';
