@@ -1,0 +1,24 @@
+//ejemplo transaccion bancaria
+
+START TRANSACTION;
+
+UPDATE cuentas SET saldo = saldo - 500 WHERE id = 1;
+UPDATE cuentas SET saldo = saldo + 500 WHERE id = 2;
+
+-- Si todo sale bien
+COMMIT;
+
+-- Si algo falla
+ROLLBACK;
+
+
+
+
+
+
+
+//  COMMIT guarda
+    ROLLBACK deshace
+
+COMMIT confirma los cambios de una transacción y los guarda permanentemente,
+mientras que ROLLBACK revierte los cambios cuando ocurre un error o no se cumplen las condiciones.

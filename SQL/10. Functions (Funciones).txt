@@ -1,0 +1,21 @@
+A diferencia de los procedimientos, las funciones devuelven un valor.
+
+Crear función
+
+DELIMITER $$
+CREATE FUNCTION calcularBono(sal DECIMAL(10,2))
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+RETURN sal * 0.10;
+END $$
+DELIMITER ;
+
+Usarla
+SELECT nombre, calcularBono(salario) AS bono FROM empleados;
+
+
+
+//Diferencia clave (respuesta ideal)
+
+Un Stored Procedure puede ejecutar múltiples operaciones y devolver varios resultados, mientras que una Function siempre devuelve un valor y puede usarse dentro de una consulta SQL.

@@ -1,4 +1,0 @@
-CREATE VIEW vista_empleados AS
-SELECT nombre, salario FROM empleados WHERE salario > 6000;
-
-SELECT * FROM vista_empleados;

@@ -1,0 +1,43 @@
+DISTINCT se utiliza para eliminar registros duplicados en el resultado de una consulta.
+
+Es decir:
+muestra solo valores únicos.
+
+
+// Ejemplo simple
+
+Tabla empleados:
+
+nombre
+Ana
+Juan
+Ana
+Pedro
+
+Consulta:
+
+SELECT DISTINCT nombre
+FROM empleados;
+
+
+Resultado:
+
+Ana
+Juan
+Pedro
+
+
+// “Ana” solo aparece una vez, aunque esté repetida en la tabla.
+
+// ¿Dónde se usa?
+
+Con SELECT
+
+En una o varias columnas
+
+SELECT DISTINCT departamento_id, puesto
+FROM empleados;
+
+===> Frase corta para entrevista
+
+DISTINCT elimina duplicados y devuelve solo registros únicos en una consulta.

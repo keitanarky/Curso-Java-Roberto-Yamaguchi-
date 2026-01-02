@@ -1,0 +1,24 @@
+CREATE VIEW vista_empleados AS
+SELECT nombre, salario FROM empleados WHERE salario > 6000;
+
+SELECT * FROM vista_empleados;
+
+
+//otro ejemploCREATE VIEW vista_empleados AS
+SELECT nombre, salario
+FROM empleados
+WHERE salario > 10000;
+
+
+//ejecutando vista o VIEW
+SELECT * FROM vista_empleados;
+
+
+//informacion adicional
+Punto clave (muy preguntado)
+
+Una vista no guarda datos, solo la consulta
+
+Se comporta como una tabla
+
+Algunas vistas no permiten INSERT/UPDATE
